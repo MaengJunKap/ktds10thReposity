@@ -8,31 +8,19 @@ import java.util.Scanner;
 public class TotalAndAverageCalculator {
 
 	Scanner input = new Scanner(System.in);
+//	final int SCORE_COUNT = 4;
 	
-	void printTotalAndAverage() {
+	void printTotalAndAverage ( int[] points ) {
 		
-		System.out.println("합계와 평균 구하기 프로그램");
-		
-		System.out.println("첫 번째 숫자를 입력하세요.");
-		int numberOne = input.nextInt();
-		
-		System.out.println("두 번째 숫자를 입력하세요.");
-		int numberTwo = input.nextInt();
-		
-		System.out.println("세 번째 숫자를 입력하세요.");
-		int numberThree = input.nextInt();
-		
-		System.out.println("네 번째 숫자를 입력하세요.");
-		int numberFour = input.nextInt();
-		
-		int totalPoint = numberOne + numberTwo + numberThree + numberFour;
-		System.out.println(numberOne + " + "
-						+ numberTwo + " + "
-						+ numberThree + " + "
-						+ numberFour + " = "
+		int totalPoint = points[0] + points[1] + points[2] + points[3];
+		System.out.println(points[0] + " + "
+						+ points[1] + " + "
+						+ points[2] + " + "
+						+ points[3] + " = "
 						+ totalPoint);
 		
-		double averagePoint = totalPoint / 4.0;
+//		double averagePoint = totalPoint / (double) points.length;
+		double averagePoint = totalPoint / (points.length * 1.0);
 		System.out.println("평균은 " + averagePoint + " 입니다.");
 		
 	}
